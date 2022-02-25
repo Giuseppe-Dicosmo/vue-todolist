@@ -22,10 +22,18 @@
 
     <div class="list-contenuto">
       <ul class="list-center">
-        <li v-for="(note, index) in todoList" class="todo">
+
+        <li v-for="(note, index)  in todoList"
+            v-bind:class="(note.done === true) ? through : '' "
+            class="todo">
+
           {{ note.text }}
-          <i class="fas fa-times"></i>
+
+          <div>
+            <i class="fas fa-times"></i>
+          </div>
         </li>
+
       </ul>
     </div>
 

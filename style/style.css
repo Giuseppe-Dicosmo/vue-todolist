@@ -76,7 +76,7 @@ input {
 .todo {
   border-bottom: 1px solid hsl(7deg 86% 39%);
   padding: 20px 0 5px 0;
-  width: 500px;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }
