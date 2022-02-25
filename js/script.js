@@ -2,8 +2,9 @@ const app = new Vue({
 
   el: '#container',
   data: {
-    newTodo: '',
     through: 'text-through',
+    newTodo: '',
+    done: false,
     todoList: [
       {
         text: 'Fare la spesa',
@@ -22,9 +23,10 @@ const app = new Vue({
 
   methods: {
     pushTodo: function () {
-      if (this.newTodo.le)
-      this.todoList.push(this.newTodo)
-
+      if (this.newTodo.length > 0) {
+        this.todoList.push( {text: this.newTodo, done: this.done} );
+        this.newTodo = '';
+      }
     }
   }
 
